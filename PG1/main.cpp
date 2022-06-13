@@ -1,5 +1,5 @@
-#include<GLUT/glut.h>
 #define GL_SILENCE_DEPRECATION
+#include<GLUT/glut.h>
 #include <stdlib.h>
 #include<math.h>
 
