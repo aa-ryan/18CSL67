@@ -1,8 +1,8 @@
 // Scan-Line algorithm for filling a polygon
-#define SILENCE_GL_DEPRECATION
 #define BLACK 0
 #include <stdlib.h>
 #include <stdio.h>
+#define GL_SILENCE_DEPRECATION
 #include <GLUT/glut.h>
 float x1,x2,x3,x4,y1,y2,y3,y4;
 void edgedetect(float x1,float y1,float x2,float y2,int *le,int *re)
