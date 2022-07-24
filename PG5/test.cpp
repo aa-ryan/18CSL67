@@ -27,10 +27,13 @@ int GetCode(GLfloat x, GLfloat y) {
 void Clip() {
 	int C;
 	GLfloat x, y;
+
+	// chekcing for outside points
 	if (C1)
 		C = C1;
 	else
 		C = C2;
+
 	if (C & Left) {
 		x = xMin;
 		y = y1+(y2-y1)*((xMin-x1)/(x2-x1));
@@ -81,7 +84,7 @@ void Draw() {
 	C2 = GetCode(x2, y2);
 
 		if ((C1|C2) == 0) break; // complete accept
-		else if ((C1&C2) != 0) {
+		else if ((C1&C2) != 0 && flag == 1) {
 			flag = 0;
 			break;
 		} // complete reject
